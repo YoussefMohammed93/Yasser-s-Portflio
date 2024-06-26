@@ -5,12 +5,14 @@
 :root {
   --main-color: #1e90ff;
   --text-color: #000;
-  --bg-main: #eee;
+  --bg-main: #fff;
+  --bg-second: #f1f1f1;
 }
 
 .dark {
   --text-color: #fff;
   --bg-main: #151515;
+  --bg-second: #252525;
 }
 
 .p-main {
