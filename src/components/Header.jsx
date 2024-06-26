@@ -55,8 +55,8 @@ export default function Header() {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg font-semibold text-[var(--main-color)] transition-all duration-300 hover:text-[var(--main-color)]"
-                  : "text-lg font-semibold text-[var(--text-color)] transition-all duration-300 hover:text-[var(--main-color)]"
+                  ? "text-lg font-bold text-[var(--main-color)] transition-all duration-300 hover:text-[var(--main-color)]"
+                  : "text-lg font-bold text-[var(--text-color)] transition-all duration-300 hover:text-[var(--main-color)]"
               }
             >
               Home
@@ -67,8 +67,8 @@ export default function Header() {
               to="/projects"
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg font-semibold text-[var(--main-color)] transition-all duration-300 hover:text-[var(--main-color)]"
-                  : "text-lg font-semibold text-[var(--text-color)] transition-all duration-300 hover:text-[var(--main-color)]"
+                  ? "text-lg font-bold  text-[var(--main-color)] transition-all duration-300 hover:text-[var(--main-color)]"
+                  : "text-lg font-bold text-[var(--text-color)] transition-all duration-300 hover:text-[var(--main-color)]"
               }
             >
               Projects
@@ -79,8 +79,8 @@ export default function Header() {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-lg font-semibold text-[var(--main-color)] transition-all duration-300 hover:text-[var(--main-color)]"
-                  : "text-lg font-semibold text-[var(--text-color)] transition-all duration-300 hover:text-[var(--main-color)]"
+                  ? "text-lg font-bold text-[var(--main-color)] transition-all duration-300 hover:text-[var(--main-color)]"
+                  : "text-lg font-bold text-[var(--text-color)] transition-all duration-300 hover:text-[var(--main-color)]"
               }
             >
               About
@@ -91,7 +91,7 @@ export default function Header() {
       <div className="flex items-center sm:hidden">
         <Link
           to="/"
-          className="text-white bg-[var(--main-color)] font-semibold py-1 px-3 rounded-full border-2 border-transparent hover:border-[var(--text-color)] transition-all duration-500"
+          className="text-white bg-[var(--main-color)] font-bold py-1 px-3 rounded-full border-2 border-transparent hover:border-[var(--text-color)] transition-all duration-500"
         >
           Download Resume
         </Link>
@@ -136,7 +136,7 @@ export default function Header() {
       <div className="hidden sm:block">
         <Link
           to="/"
-          className="text-white bg-[var(--main-color)] font-semibold py-2 px-4 rounded-full border-2 border-transparent hover:border-[var(--text-color)] transition-all duration-500"
+          className="text-white bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:border-[var(--text-color)] transition-all duration-500"
         >
           Download Resume
         </Link>
