@@ -12,6 +12,19 @@
   font-family: "Cairo", sans-serif;
 }
 
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 12.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
 :root {
   --main-color: #1e90ff;
   --text-color: #000;
@@ -23,7 +36,7 @@
 
 .dark {
   --text-color: #fff;
-  --gray-color: #b6b6b6;
+  --gray-color: #cccccc;
   --text-white: #fff;
   --bg-main: #151515;
   --bg-second: #252525;
@@ -72,6 +85,7 @@
   height: 100%;
   overflow: hidden;
 }
+
 @keyframes circleAnimation {
   0% {
     opacity: 0.2;
@@ -84,6 +98,7 @@
     transform: translateY(-1000px) rotate(720deg);
   }
 }
+
 .circles > div {
   position: absolute;
   display: block;
@@ -93,6 +108,7 @@
   animation: circleAnimation 25s linear infinite;
   background: var(--main-color);
 }
+
 .circles > div:nth-child(1) {
   left: 10%;
   width: 40px;
@@ -100,6 +116,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(2) {
   left: 20%;
   width: 25px;
@@ -107,6 +124,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(3) {
   left: 30%;
   width: 40px;
@@ -114,6 +132,7 @@
   animation-delay: 0s;
   animation-duration: 12s;
 }
+
 .circles > div:nth-child(4) {
   left: 40%;
   width: 25px;
@@ -121,6 +140,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(5) {
   left: 50%;
   width: 40px;
@@ -128,6 +148,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(6) {
   left: 60%;
   width: 28px;
@@ -135,6 +156,7 @@
   animation-delay: 0s;
   animation-duration: 12s;
 }
+
 .circles > div:nth-child(7) {
   left: 70%;
   width: 40px;
@@ -142,6 +164,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(8) {
   left: 80%;
   width: 30px;
@@ -149,6 +172,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(9) {
   left: 90%;
   width: 40px;
@@ -156,6 +180,7 @@
   animation-delay: 0s;
   animation-duration: 12s;
 }
+
 .circles > div:nth-child(10) {
   left: 96%;
   width: 36px;
@@ -163,6 +188,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(11) {
   left: 5%;
   bottom: 60%;
@@ -171,6 +197,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(12) {
   left: 10%;
   bottom: 50%;
@@ -179,6 +206,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(13) {
   left: 45%;
   bottom: 40%;
@@ -187,6 +215,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(14) {
   left: 55%;
   bottom: 30%;
@@ -195,6 +224,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(15) {
   left: 65%;
   bottom: 20%;
@@ -203,6 +233,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(16) {
   left: 75%;
   bottom: 10%;
@@ -211,6 +242,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(17) {
   left: 13%;
   bottom: 18%;
@@ -219,6 +251,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(18) {
   left: 35%;
   bottom: 17%;
@@ -227,6 +260,7 @@
   animation-delay: 0s;
   animation-duration: 9s;
 }
+
 .circles > div:nth-child(19) {
   left: 60%;
   bottom: 40%;
@@ -235,6 +269,7 @@
   animation-delay: 0s;
   animation-duration: 7s;
 }
+
 .circles > div:nth-child(20) {
   left: 53%;
   bottom: 20%;
@@ -243,6 +278,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(21) {
   left: 33%;
   bottom: 40%;
@@ -251,6 +287,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(22) {
   left: 13%;
   bottom: 25%;
@@ -259,6 +296,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 .circles > div:nth-child(23) {
   left: 47%;
   bottom: 10%;
@@ -267,6 +305,7 @@
   animation-delay: 0s;
   animation-duration: 10s;
 }
+
 .circles > div:nth-child(24) {
   left: 86%;
   bottom: 30%;
@@ -275,6 +314,7 @@
   animation-delay: 0s;
   animation-duration: 12s;
 }
+
 .circles > div:nth-child(25) {
   left: 42%;
   bottom: 28%;
@@ -283,6 +323,7 @@
   animation-delay: 0s;
   animation-duration: 8s;
 }
+
 @media (max-width: 768px) {
   @keyframes circleAnimation {
     0% {
@@ -295,5 +336,35 @@
       border-radius: 75%;
       transform: translateY(-1000px) rotate(720deg);
     }
+  }
+}
+
+/* Mouse Animation */
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--text-color);
+  border-radius: 60px;
+}
+
+.mouse::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-color);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 1.3s infinite;
+  -webkit-animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+  100% {
+    opacity: 0;
+    top: 25px;
   }
 }
