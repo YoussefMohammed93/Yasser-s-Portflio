@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "./components/Header";
 import SettingsBox from "./components/SettingsBox";
 import Circles from "./components/CirclesAnimation";
+import SkillsSection from "./components/Skills";
 import YasserImg from "/src/assets/yasser.jpg";
 
 export default function Home() {
@@ -11,14 +12,14 @@ export default function Home() {
       <SettingsBox />
       <Circles />
       <main className="home-main p-main pt-20 lg:pt-44 bg-[var(--bg-main)] min-h-screen">
-        <div className="home-container grid grid-cols-1 lg:grid-cols-12 items-center relative z-20">
+        <section className="home-container grid grid-cols-1 lg:grid-cols-12 items-center relative z-20">
           <div className="col-span-1 lg:col-span-6 text-center lg:text-start mt-12">
             <h1 className="text-4xl lg:text-5xl font-black text-[var(--text-color)]">
               Hello , I'm Yasser
             </h1>
-            <h2 className="text-2xl font-semibold mt-4 lg:mt-6 text-[var(--gray-color)]">
+            <h2 className="text-2xl mt-4 lg:mt-6 text-[var(--gray-color)]">
               An Creative{" "}
-              <span className="text-[var(--main-color)] text-4xl font-bold ml-1">
+              <span className="text-[var(--main-color)] text-4xl font-bold ml-1 text-glow">
                 Artist
               </span>
             </h2>
@@ -41,20 +42,21 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-1 lg:col-span-6 mt-16 lg:mt-0">
+          <div className="col-span-1 lg:col-span-6 mt-5 lg:mt-0">
             <img
               src={YasserImg}
               alt="Yasser Galal"
               className="w-full h-auto relative z-20 rounded-3xl"
             />
           </div>
-        </div>
-        <div className="mouse-container justify-center mt-10 hidden lg:flex">
+        </section>
+        <div className="mouse-container justify-center mt-10 flex">
           <Link to="/">
             <div className="mouse overflow-hidden relative z-30"></div>
           </Link>
         </div>
       </main>
+      <SkillsSection />
     </div>
   );
 }
