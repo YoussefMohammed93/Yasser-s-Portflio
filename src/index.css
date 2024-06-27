@@ -15,6 +15,7 @@
 :root {
   --main-color: #1e90ff;
   --text-color: #000;
+  --text-white: #fff;
   --gray-color: #707070;
   --bg-main: #fff;
   --bg-second: #f1f1f1;
@@ -23,6 +24,7 @@
 .dark {
   --text-color: #fff;
   --gray-color: #b6b6b6;
+  --text-white: #fff;
   --bg-main: #151515;
   --bg-second: #252525;
 }

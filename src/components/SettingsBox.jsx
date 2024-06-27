@@ -82,7 +82,7 @@ const SettingsBox = () => {
         <div className="settings-container relative flex items-center flex-col p-4">
           <div className="option-box flex items-center flex-col w-40 m-5 mt-8 gap-4 p-3 rounded-lg bg-[#9999992E]">
             <ul className="colors-list flex items-center justify-between gap-2">
-              {["#1E90FF", "#FF7575", "#4AB84D", "#FFA500"].map((color) => (
+              {["#1E90FF", "#FF7575", "#4AB84D", "#FF6A00"].map((color) => (
                 <li
                   key={color}
                   className={`cursor-pointer rounded-full w-6 h-6 border-2 border-white ${

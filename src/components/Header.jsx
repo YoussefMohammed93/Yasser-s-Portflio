@@ -37,7 +37,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="header fixed z-20 flex items-center justify-between w-full h-16 p-main bg-[var(--bg-second)] shadow-md">
+    <header className="header fixed z-30 flex items-center justify-between w-full h-16 p-main bg-[var(--bg-second)] shadow-md">
       <div className="logo w-20">
         <Link to="/">
           <img src={darkMode ? LogoWhite : Logo} alt="Yasser Galal Logo" />
@@ -91,7 +91,7 @@ export default function Header() {
       <div className="flex items-center sm:hidden">
         <Link
           to="/"
-          className="text-white bg-[var(--main-color)] font-bold py-1 px-3 rounded-full border-2 border-transparent hover:border-[var(--text-color)] transition-all duration-500"
+          className="text-white bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] hover:bg-[var(--bg-second)] hover:border-[var(--main-color)] transition-all duration-500"
         >
           Download Resume
         </Link>
@@ -136,7 +136,7 @@ export default function Header() {
       <div className="hidden sm:block">
         <Link
           to="/"
-          className="text-white bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:border-[var(--text-color)] transition-all duration-500"
+          className="text-white bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] hover:bg-[var(--bg-second)] hover:border-[var(--main-color)] transition-all duration-500"
         >
           Download Resume
         </Link>
