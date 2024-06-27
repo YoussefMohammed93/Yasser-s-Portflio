@@ -46,7 +46,7 @@ export default function Home() {
             <img
               src={YasserImg}
               alt="Yasser Galal"
-              className="w-full h-auto relative z-20 rounded-3xl"
+              className="w-full h-auto relative z-20 rounded-2xl"
             />
           </div>
         </section>

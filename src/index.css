@@ -29,14 +29,14 @@
   --main-color: #1e90ff;
   --text-color: #000;
   --text-white: #fff;
-  --gray-color: #707070;
+  --gray-color: #535353;
   --bg-main: #fff;
   --bg-second: #f1f1f1;
 }
 
 .dark {
   --text-color: #fff;
-  --gray-color: #cccccc;
+  --gray-color: #a8a8a8;
   --text-white: #fff;
   --bg-main: #151515;
   --bg-second: #252525;
@@ -63,7 +63,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .p-main {
     padding-left: 60px;
     padding-right: 60px;
