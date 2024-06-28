@@ -16,7 +16,12 @@ export default function About() {
       <Header />
       <SettingsBox />
       <main className="about bg-[var(--bg-main)] min-h-screen">
-        <div className="about-container px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 pt-16 sm:pt-24 md:pt-32 pb-10">
+        <div className="pt-24 pb-4 sm:pb-8">
+          <h1 className="main-title text-4xl sm:text-5xl text-center font-black text-[var(--text-color)] uppercase">
+            About
+          </h1>
+        </div>
+        <div className="about-container p-main pb-10">
           <div className="grid items-start grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="col-span-1 lg:col-span-6 flex justify-center lg:justify-start mt-4 sm:mt-0 mb-6">
               <img

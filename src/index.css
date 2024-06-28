@@ -483,3 +483,23 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+.main-title::before {
+  content: "";
+  display: inline-block;
+  width: 5rem;
+  height: 5px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  margin: 0 20px 8px 0;
+}
+
+.main-title::after {
+  content: "";
+  display: inline-block;
+  width: 5rem;
+  height: 5px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  margin: 0 0 8px 20px;
+}
