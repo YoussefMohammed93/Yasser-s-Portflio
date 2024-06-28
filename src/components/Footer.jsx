@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="main-padding mx-auto">
         <div className="sm:flex justify-between items-center">
           <div className="mb-6 sm:mb-0">
-            <h2 className="text-2xl font-bold">Yasser Galal</h2>
+            <h2 className="text-2xl font-bold">Yaser Galal</h2>
             <div className="pt-5">
               <p className="flex items-center">
                 <svg
@@ -131,7 +131,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-[var(--text-p)] text-center text-sm mt-8 pb-4">
-          © 2024 Yasser, All rights reserved.
+          © 2024 Yaser, All rights reserved.
         </p>
       </div>
     </footer>
