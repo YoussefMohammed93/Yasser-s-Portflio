@@ -84,13 +84,13 @@ export default function Rabid() {
               alt="Main"
               className="w-full h-96 mb-4 rounded-lg"
             />
-            <div className="flex justify-between space-x-4">
+            <div className="flex justify-between space-x-4 overflow-x-scroll sm:overflow-x-auto">
               {currentImages.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Small ${index}`}
-                  className="w-full h-20 cursor-pointer rounded-lg"
+                  className="w-full h-28 sm:h-20 cursor-pointer rounded-lg"
                   onClick={() => handleSmallImageClick(image)}
                 />
               ))}
