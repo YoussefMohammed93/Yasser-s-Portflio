@@ -90,7 +90,7 @@ export default function Header() {
       </nav>
       <div className="flex items-center sm:hidden">
         <a
-          href="src/assets/Yasser Galal Resume.pdf"
+          href="src/assets/pdf.pdf"
           download
           className="text-white flex items-center bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] hover:bg-[var(--bg-second)] hover:border-[var(--main-color)] transition-all duration-500"
         >
@@ -158,7 +158,7 @@ export default function Header() {
       </div>
       <div className="hidden sm:block">
         <a
-          href="src/assets/Yasser Galal Resume.pdf"
+          href="src/assets/pdf.pdf"
           download
           className="text-white flex items-center bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] hover:bg-[var(--bg-second)] hover:border-[var(--main-color)] transition-all duration-500"
         >

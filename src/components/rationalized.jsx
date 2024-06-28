@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import ScrollToTop from "./ScrollToTopBtn";
 import SettingsBox from "./SettingsBox";
-import VidOneImg from "/src/assets/vidone.png";
+import VidOneImg from "/src/assets/yt.png";
 import VidTwoImg from "/src/assets/vidtwo.jpg";
 
 export default function RationalizedSection() {
