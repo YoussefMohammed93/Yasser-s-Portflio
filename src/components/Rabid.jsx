@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RabidImgOneOne from "/src/assets/dragon1.png";
 import RabidImgOneTwo from "/src/assets/dragon2.png";
 import RabidImgOneThree from "/src/assets/dragon3.png";
@@ -17,6 +17,7 @@ export default function Rabid() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);
   const [mainImage, setMainImage] = useState("");
+  const [popupTransition, setPopupTransition] = useState(false);
 
   const handleImageClick = (images) => {
     setCurrentImages(images);
@@ -29,8 +30,19 @@ export default function Rabid() {
   };
 
   const handleClosePopup = () => {
-    setIsPopupOpen(false);
+    setPopupTransition(false);
+    setTimeout(() => {
+      setIsPopupOpen(false);
+    }, 300); // Duration of the transition
   };
+
+  useEffect(() => {
+    if (isPopupOpen) {
+      setTimeout(() => {
+        setPopupTransition(true);
+      }, 10); // Small delay to ensure transition class is applied
+    }
+  }, [isPopupOpen]);
 
   return (
     <div>
@@ -57,8 +69,16 @@ export default function Rabid() {
         </div>
       </main>
       {isPopupOpen && (
-        <div className="fixed inset-0 bg-black p-main bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-[var(--bg-second)] p-4 rounded-lg w-full sm:w-2/3 md:w-1/2 lg:w-5/12 xl:w-4/12">
+        <div
+          className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300  ${
+            popupTransition ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div
+            className={`bg-[var(--bg-second)] p-4 rounded-lg w-full sm:w-2/3 md:w-1/2 lg:w-5/12 xl:w-4/12 transform transition-transform duration-300 ${
+              popupTransition ? "scale-100" : "scale-95"
+            }`}
+          >
             <img
               src={mainImage}
               alt="Main"
