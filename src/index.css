@@ -42,9 +42,28 @@
   --bg-second: #252525;
 }
 
+
 .p-main {
   padding-left: 120px;
   padding-right: 120px;
+}
+
+@media(min-width: 1537px) {
+  .rationalized-img {
+    height: 26rem !important;
+  }
+  .rapid-img {
+    height: 34rem !important;
+  }
+  .rapid-img-small {
+    height: 7rem !important;
+  }
+}
+
+@media(min-width: 1919px) {
+  .rationalized-img {
+    height: 28rem !important;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -434,7 +453,7 @@
 
 .word {
   opacity: 0;
-  animation: appear 0.5s forwards;
+  animation: appear 0.35s forwards;
   display: inline-block;
   white-space: nowrap;
 }
@@ -492,7 +511,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .rabid-card:hover .overlay,

@@ -6,8 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styled from "styled-components";
-
-// Import images
+import TerminatorOne from "/src/assets/terminator1.png";
+import TerminatorTwo from "/src/assets/terminator2.png";
+import TerminatorThree from "/src/assets/terminator3.png";
+import TerminatorFour from "/src/assets/terminator4.png";
 import RabidImgOneOne from "/src/assets/dragon1.png";
 import RabidImgOneTwo from "/src/assets/dragon2.png";
 import RabidImgOneThree from "/src/assets/dragon3.png";
@@ -40,6 +42,14 @@ import StrikeOne from "/src/assets/strike1.png";
 import StrikeTwo from "/src/assets/strike2.png";
 import StrikeThree from "/src/assets/strike3.png";
 import StrikeFour from "/src/assets/strike4.png";
+import VisualOne from "/src/assets/visual1.png";
+import VisualTwo from "/src/assets/visual2.png";
+import VisualThree from "/src/assets/visual3.png";
+import VisualFour from "/src/assets/visual4.png";
+import YinOne from "/src/assets/yinyang1.png";
+import YinTwo from "/src/assets/yinyang2.png";
+import YinThree from "/src/assets/yinyang3.png";
+import YinFour from "/src/assets/yinyang4.png";
 
 const rabidItems = [
   {
@@ -94,6 +104,24 @@ const rabidItems = [
     name: "Strike Fear",
     mainImage: StrikeFour,
     images: [StrikeFour, StrikeTwo, StrikeThree, StrikeOne],
+  },
+  {
+    id: 9,
+    name: "Terminator 76 - 77",
+    mainImage: TerminatorOne,
+    images: [TerminatorOne, TerminatorTwo, TerminatorThree, TerminatorFour],
+  },
+  {
+    id: 10,
+    name: "VisualCraze",
+    mainImage: VisualThree,
+    images: [VisualThree, VisualTwo, VisualOne, VisualFour],
+  },
+  {
+    id: 11,
+    name: "Yin Yang",
+    mainImage: YinFour,
+    images: [YinFour, YinTwo, YinThree, YinOne],
   },
 ];
 
@@ -239,18 +267,11 @@ export default function Rapid() {
                     <div className="flex items-center">
                       <button
                         type="button"
-                        className="text-white mr-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-500"
+                        className="text-white mr-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-300"
                         onClick={() => handleImageClick(item.images)}
                       >
-                        View Project
+                        View
                       </button>
-                      <Link
-                        to="https://www.youtube.com/@rationalized"
-                        target="_blank"
-                        className="text-white ml-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-500"
-                      >
-                        Visit Youtube
-                      </Link>
                     </div>
                   </div>
                   <h3 className="text-center text-2xl font-bold uppercase text-[var(--text-color)] mt-3 mb-3">
@@ -270,14 +291,14 @@ export default function Rapid() {
           }`}
         >
           <div
-            className={`bg-[var(--bg-second)] p-4 rounded-lg w-full sm:w-2/3 md:w-1/2 lg:w-5/12 xl:w-4/12 transform transition-transform duration-300 ${
+            className={`bg-[var(--bg-second)] p-4 rounded-lg w-full sm:w-2/3 md:w-1/2 lg:w-5/12 xl:w-4/12 transform transition-transform duration-500 ${
               popupTransition ? "scale-100" : "scale-95"
             }`}
           >
             <img
               src={mainImage}
               alt="Main"
-              className="w-full h-96 mb-4 rounded-lg"
+              className="rapid-img w-full h-[26rem] mb-4 rounded-lg"
             />
             <div className="flex justify-between space-x-4 overflow-x-scroll sm:overflow-x-auto">
               {currentImages.map((image, index) => (
@@ -285,7 +306,7 @@ export default function Rapid() {
                   key={index}
                   src={image}
                   alt={`Small ${index}`}
-                  className="w-full h-28 sm:h-20 cursor-pointer rounded-lg"
+                  className="rapid-img-small w-full h-28 sm:h-24 cursor-pointer rounded-lg"
                   onClick={() => handleSmallImageClick(image)}
                 />
               ))}

@@ -4,7 +4,7 @@ import ScrollToTop from "./components/ScrollToTopBtn";
 import SettingsBox from "./components/SettingsBox";
 import Footer from "./components/Footer";
 import RapidPhoto from "/src/assets/rabid.png";
-import YasserYT from "/src/assets/yt2.png";
+import YasserYT from "/src/assets/yaser3.png";
 
 export default function Projects() {
   return (
@@ -24,8 +24,8 @@ export default function Projects() {
             <Link to="/rapid">
               <img src={RapidPhoto} alt="Rapid" />
               <div className="project-overlay">
-                <h2 className="text-xl font-bold text-center text-white">
-                  Click TO View Project
+                <h2 className="text-2xl sm:text-4xl font-bold text-center text-white">
+                  View
                 </h2>
               </div>
               <h2 className="text-5xl font-bold text-center mt-3 text-[var(--text-color)]">
@@ -40,8 +40,8 @@ export default function Projects() {
             <Link to="/rationalized">
               <img src={YasserYT} alt="Rapid" />
               <div className="project-overlay">
-                <h2 className="text-xl font-bold text-center text-white">
-                  Click TO View Project
+                <h2 className="text-2xl sm:text-4xl font-bold text-center text-white">
+                  View
                 </h2>
               </div>
               <h2 className="text-5xl font-bold text-center mt-3 text-[var(--text-color)]">

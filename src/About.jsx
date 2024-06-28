@@ -4,7 +4,7 @@ import SettingsBox from "./components/SettingsBox";
 import SkillsSection from "./components/Skills";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTopBtn";
-import YasserImg from "/src/assets/yasser2.jpg";
+import YasserImg from "/src/assets/about2.jpg";
 import YoutubeIcon from "/src/assets/youtube.png";
 import XIcon from "/src/assets/twitter.png";
 import BuyMeCoffe from "/src/assets/buymecoffe.png";
@@ -22,7 +22,7 @@ export default function About() {
             About
           </h1>
         </div>
-        <div className="about-container p-main pb-10">
+        <div className="about-container p-main min-h-[80vh] pb-10 pt-4 sm:pt-12">
           <div className="grid items-start grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="col-span-1 lg:col-span-6 flex justify-center lg:justify-start mt-4 sm:mt-0 mb-6">
               <img

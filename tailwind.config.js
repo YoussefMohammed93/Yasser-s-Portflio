@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        lg: "1025px", // Redefine lg breakpoint to start at 1025px
+        lg: "1025px",
       },
     },
   },

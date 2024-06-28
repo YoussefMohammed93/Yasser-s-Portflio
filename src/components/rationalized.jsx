@@ -27,11 +27,11 @@ export default function RationalizedSection() {
               <img
                 src={VidOneImg}
                 alt="The Hannibal Directive"
-                className="w-full sm:h-[21rem] h-[14rem]"
+                className="rationalized-img w-full sm:h-[21rem] h-[14rem]"
               />
               <div className="project-overlay flex flex-col">
-                <h2 className="text-xl font-bold text-center text-white">
-                  Click TO View Project
+                <h2 className="text-white mr-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-300 mb-3">
+                  Click To View Project
                 </h2>
                 <p className="text-white text-base sm:text-lg">
                   The Hannibal Directive: How Israel K*lls Its Own Soldiers.
@@ -47,10 +47,14 @@ export default function RationalizedSection() {
               to="https://www.youtube.com/watch?v=h9yuS836nig"
               target="_blank"
             >
-              <img src={VidTwoImg} alt="Rapid" className="w-full sm:h-[21rem] h-[14rem]" />
+              <img
+                src={VidTwoImg}
+                alt="Rapid"
+                className="rationalized-img w-full sm:h-[21rem] h-[14rem]"
+              />
               <div className="project-overlay  flex flex-col">
-                <h2 className="text-xl font-bold text-center text-white">
-                  Click TO View Project
+                <h2 className="text-white mr-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-300 mb-3">
+                  Click To View Project
                 </h2>
                 <p className="text-white text-base sm:text-lg">
                   Palestine-Israel, The Eternal Case.
