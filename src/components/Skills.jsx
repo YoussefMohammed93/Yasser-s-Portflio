@@ -70,6 +70,9 @@ const SkillsSection = () => {
               1024: {
                 slidesPerView: 4,
               },
+              1537: {
+                slidesPerView: 5,
+              },
             }}
           >
             {skills.map((skill, index) => (

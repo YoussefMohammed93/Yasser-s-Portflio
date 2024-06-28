@@ -79,7 +79,7 @@ export default function Footer() {
               <h3 className="font-bold text-lg pb-2">Fast Links</h3>
               <ul className="resources">
                 <li>
-                  <Link to="about">About Me</Link>
+                  <Link to="https://www.youtube.com/@rationalized" target="_blank">Youtube</Link>
                 </li>
                 <li className="mt-2">
                   <Link
