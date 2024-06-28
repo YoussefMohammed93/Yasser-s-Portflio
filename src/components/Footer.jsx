@@ -7,7 +7,7 @@ import BuyMeCoffe from "/src/assets/buymecoffe.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--bg-main)] text-[var(--text-color)] p-5 p-main">
+    <footer className="bg-[var(--bg-main)] text-[var(--text-color)] p-5 p-main border-t border-gray-200">
       <div className="main-padding mx-auto">
         <div className="sm:flex justify-between items-center">
           <div className="mb-6 sm:mb-0">

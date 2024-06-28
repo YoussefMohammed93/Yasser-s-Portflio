@@ -3,6 +3,34 @@ import RabidImgOneOne from "/src/assets/dragon1.png";
 import RabidImgOneTwo from "/src/assets/dragon2.png";
 import RabidImgOneThree from "/src/assets/dragon3.png";
 import RabidImgOneFour from "/src/assets/dragon4.png";
+import HeavenlyImgOneOne from "/src/assets/Heavenly1.png";
+import HeavenlyImgOneTwo from "/src/assets/Heavenly2.png";
+import HeavenlyImgOneThree from "/src/assets/Heavenly3.png";
+import HeavenlyImgOneFour from "/src/assets/Heavenly4.png";
+import HimImgOne from "/src/assets/him1.png";
+import HimImgTwo from "/src/assets/him2.png";
+import HimImgThree from "/src/assets/him3.png";
+import HimImgFour from "/src/assets/him4.png";
+import SpideImgOne from "/src/assets/spider1.png";
+import SpideImgTwo from "/src/assets/spider2.png";
+import SpideImgThree from "/src/assets/spider3.png";
+import SpideImgFour from "/src/assets/spider4.png";
+import StarsOneImg from "/src/assets/stars1.png";
+import StarsTwoImg from "/src/assets/stars2.png";
+import StarsThreeImg from "/src/assets/stars3.png";
+import StarsFourImg from "/src/assets/stars4.png";
+import SnakeOneImg from "/src/assets/snake1.png";
+import SnakeTwoImg from "/src/assets/snake2.png";
+import SnakeThreeImg from "/src/assets/snake3.png";
+import SnakeFourImg from "/src/assets/snake4.png";
+import SprayImgOne from "/src/assets/spray1.png";
+import SprayImgTwo from "/src/assets/spray2.png";
+import SprayImgThree from "/src/assets/spray3.png";
+import SprayImgFour from "/src/assets/spray4.png";
+import StrikeOne from "/src/assets/strike1.png";
+import StrikeTwo from "/src/assets/strike2.png";
+import StrikeThree from "/src/assets/strike3.png";
+import StrikeFour from "/src/assets/strike4.png";
 
 const rabidItems = [
   {
@@ -10,6 +38,53 @@ const rabidItems = [
     name: "Dragon",
     mainImage: RabidImgOneOne,
     images: [RabidImgOneOne, RabidImgOneTwo, RabidImgOneThree, RabidImgOneFour],
+  },
+  {
+    id: 2,
+    name: "Heavenly",
+    mainImage: HeavenlyImgOneOne,
+    images: [
+      HeavenlyImgOneOne,
+      HeavenlyImgOneTwo,
+      HeavenlyImgOneThree,
+      HeavenlyImgOneFour,
+    ],
+  },
+  {
+    id: 3,
+    name: "Him",
+    mainImage: HimImgOne,
+    images: [HimImgOne, HimImgTwo, HimImgThree, HimImgFour],
+  },
+  {
+    id: 4,
+    name: "RRspider",
+    mainImage: SpideImgOne,
+    images: [SpideImgOne, SpideImgTwo, SpideImgThree, SpideImgFour],
+  },
+  {
+    id: 5,
+    name: "Silent Stars",
+    mainImage: StarsOneImg,
+    images: [StarsOneImg, StarsTwoImg, StarsThreeImg, StarsFourImg],
+  },
+  {
+    id: 6,
+    name: "Snakes",
+    mainImage: SnakeTwoImg,
+    images: [SnakeTwoImg, SnakeOneImg, SnakeThreeImg, SnakeFourImg],
+  },
+  {
+    id: 7,
+    name: "Spray Your Truth",
+    mainImage: SprayImgOne,
+    images: [SprayImgOne, SprayImgTwo, SprayImgThree, SprayImgFour],
+  },
+  {
+    id: 8,
+    name: "Strike Fear",
+    mainImage: StrikeOne,
+    images: [StrikeOne, StrikeTwo, StrikeThree, StrikeFour],
   },
 ];
 
@@ -52,16 +127,23 @@ export default function Rabid() {
         </h1>
       </div>
       <main className="rabid p-main">
-        <div className="grid grid-cols-12 mt-8">
+        <div className="grid grid-cols-12 mt-8 gap-5">
           {rabidItems.map((item) => (
-            <div key={item.id} className="col-span-3 rabid-card">
+            <div
+              key={item.id}
+              className="rabid-card col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 rounded-lg bg-[var(--bg-second)]"
+            >
               <img
                 src={item.mainImage}
                 alt={item.name}
                 onClick={() => handleImageClick(item.images)}
                 className="cursor-pointer"
+                style={{
+                  borderTopLeftRadius: "8px",
+                  borderTopRightRadius: "8px",
+                }}
               />
-              <h3 className="text-center text-2xl font-bold uppercase text-[var(--text-color)] mt-3">
+              <h3 className="text-center text-2xl font-bold uppercase text-[var(--text-color)] mt-3 mb-3">
                 {item.name}
               </h3>
             </div>
