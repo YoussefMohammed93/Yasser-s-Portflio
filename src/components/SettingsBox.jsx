@@ -42,6 +42,17 @@ const SettingsBox = () => {
     localStorage.setItem("color-option", color);
   };
 
+  useEffect(() => {
+    const bodyClassList = document.body.classList;
+    if (darkMode) {
+      bodyClassList.add("dark-mode");
+      bodyClassList.remove("light-mode");
+    } else {
+      bodyClassList.add("light-mode");
+      bodyClassList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
   return (
     <div className="relative">
       <div
@@ -72,15 +83,16 @@ const SettingsBox = () => {
       </div>
       <div
         ref={settingsRef}
-        className={`fixed right-0 top-0 w-52 h-[17.5rem] z-40 transition-transform duration-500 bg-[#303030] ${
+        className={`fixed right-0 top-28  w-52 h-80 z-40 transition-transform duration-500 bg-[#303030] ${
           isOpen ? "transform translate-x-0" : "transform translate-x-full"
         }`}
         style={{
+          borderTopLeftRadius: "6px",
           borderBottomLeftRadius: "6px",
         }}
       >
         <div className="settings-container relative flex items-center flex-col p-4">
-          <div className="option-box flex items-center flex-col w-40 m-5 mt-8 gap-4 p-3 rounded-lg bg-[#9999992E]">
+          <div className="option-box flex items-center flex-col w-40 m-5 mt-14 gap-4 p-3 rounded-lg bg-[#9999992E]">
             <ul className="colors-list flex items-center justify-between gap-2">
               {["#1E90FF", "#FF7575", "#4AB84D", "#FF6A00"].map((color) => (
                 <li
@@ -99,12 +111,12 @@ const SettingsBox = () => {
             <h3 className="text-xl font-extrabold text-[var(--main-color)]">
               Dark Mode
             </h3>
-            <div className="darkmode-buttons flex items-center justify-between gap-5">
-              <div className="darkmode-on">
+            <div className="darkmode-buttons flex items-center justify-between gap-5 transition-all duration-1000">
+              <div className="darkmode-on transition-all duration-500">
                 <a
                   href="#"
                   id="darkModeOn"
-                  className={`rounded text-white bg-[var(--main-color)] px-4 ${
+                  className={`rounded text-white bg-[var(--main-color)] transition-all duration-1000 px-4 ${
                     darkMode ? "opacity-100" : "opacity-50"
                   }`}
                   onClick={(e) => {
@@ -115,11 +127,11 @@ const SettingsBox = () => {
                   On
                 </a>
               </div>
-              <div className="darkmode-off">
+              <div className="darkmode-off transition-all duration-1000">
                 <a
                   href="#"
                   id="darkModeOff"
-                  className={`rounded text-white bg-[var(--main-color)] px-4 ${
+                  className={`rounded text-white bg-[var(--main-color)] transition-all duration-1000 px-4 ${
                     !darkMode ? "opacity-100" : "opacity-50"
                   }`}
                   onClick={(e) => {

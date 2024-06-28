@@ -1,4 +1,13 @@
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import styled from "styled-components";
+
+// Import images
 import RabidImgOneOne from "/src/assets/dragon1.png";
 import RabidImgOneTwo from "/src/assets/dragon2.png";
 import RabidImgOneThree from "/src/assets/dragon3.png";
@@ -42,11 +51,11 @@ const rabidItems = [
   {
     id: 2,
     name: "Heavenly",
-    mainImage: HeavenlyImgOneOne,
+    mainImage: HeavenlyImgOneThree,
     images: [
+      HeavenlyImgOneThree,
       HeavenlyImgOneOne,
       HeavenlyImgOneTwo,
-      HeavenlyImgOneThree,
       HeavenlyImgOneFour,
     ],
   },
@@ -59,8 +68,8 @@ const rabidItems = [
   {
     id: 4,
     name: "RRspider",
-    mainImage: SpideImgOne,
-    images: [SpideImgOne, SpideImgTwo, SpideImgThree, SpideImgFour],
+    mainImage: SpideImgThree,
+    images: [SpideImgThree, SpideImgTwo, SpideImgOne, SpideImgFour],
   },
   {
     id: 5,
@@ -77,22 +86,76 @@ const rabidItems = [
   {
     id: 7,
     name: "Spray Your Truth",
-    mainImage: SprayImgOne,
-    images: [SprayImgOne, SprayImgTwo, SprayImgThree, SprayImgFour],
+    mainImage: SprayImgFour,
+    images: [SprayImgFour, SprayImgTwo, SprayImgThree, SprayImgOne],
   },
   {
     id: 8,
     name: "Strike Fear",
-    mainImage: StrikeOne,
-    images: [StrikeOne, StrikeTwo, StrikeThree, StrikeFour],
+    mainImage: StrikeFour,
+    images: [StrikeFour, StrikeTwo, StrikeThree, StrikeOne],
   },
 ];
 
-export default function Rabid() {
+const CustomSwiper = styled(Swiper)`
+  position: relative;
+  width: 100%;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 10px;
+  }
+
+  .swiper-button-next {
+    right: 20px; /* Adjust this value as needed */
+  }
+
+  .swiper-button-prev {
+    left: 20px; /* Adjust this value as needed */
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 45px;
+  }
+
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  &.hide-arrows .swiper-button-next,
+  &.hide-arrows .swiper-button-prev {
+    display: none;
+  }
+`;
+
+const PaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  .swiper-pagination-bullet {
+    background: #c6c6c6;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+  }
+`;
+
+export default function Rapid() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);
   const [mainImage, setMainImage] = useState("");
   const [popupTransition, setPopupTransition] = useState(false);
+  const [hideArrows, setHideArrows] = useState(false);
 
   const handleImageClick = (images) => {
     setCurrentImages(images);
@@ -112,6 +175,17 @@ export default function Rabid() {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      setHideArrows(window.scrollY >= 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     if (isPopupOpen) {
       setTimeout(() => {
         setPopupTransition(true);
@@ -121,33 +195,72 @@ export default function Rabid() {
 
   return (
     <div>
-      <div>
+      <div className="pt-24 bg-[var(--bg-main)]">
         <h1 className="main-title text-4xl sm:text-5xl text-center font-black text-[var(--text-color)] uppercase">
-          Rabid
+          Rapid
         </h1>
       </div>
-      <main className="rabid p-main">
-        <div className="grid grid-cols-12 mt-8 gap-5">
-          {rabidItems.map((item) => (
-            <div
-              key={item.id}
-              className="rabid-card col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 rounded-lg bg-[var(--bg-second)]"
-            >
-              <img
-                src={item.mainImage}
-                alt={item.name}
-                onClick={() => handleImageClick(item.images)}
-                className="cursor-pointer"
-                style={{
-                  borderTopLeftRadius: "8px",
-                  borderTopRightRadius: "8px",
-                }}
-              />
-              <h3 className="text-center text-2xl font-bold uppercase text-[var(--text-color)] mt-3 mb-3">
-                {item.name}
-              </h3>
-            </div>
-          ))}
+      <main className="rabid p-main pb-10 bg-[var(--bg-main)]">
+        <div style={{ position: "relative", width: "100%" }}>
+          <CustomSwiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true, el: ".custom-pagination" }}
+            className={`pt-10 ${hideArrows ? "hide-arrows" : ""}`}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+          >
+            {rabidItems.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div
+                  className="rabid-card rounded-lg bg-[var(--bg-second)] shadow-lg"
+                  style={{ border: "1px solid #cbcbcb" }}
+                >
+                  <img
+                    src={item.mainImage}
+                    alt={item.name}
+                    onClick={() => handleImageClick(item.images)}
+                    className="cursor-pointer"
+                    style={{
+                      borderTopLeftRadius: "8px",
+                      borderTopRightRadius: "8px",
+                    }}
+                  />
+                  <div className="overlay flex flex-col">
+                    <h3 className="text-center text-2xl font-bold uppercase text-white">
+                      {item.name}
+                    </h3>
+                    <div className="flex items-center">
+                      <button
+                        type="button"
+                        className="text-white mr-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-500"
+                        onClick={() => handleImageClick(item.images)}
+                      >
+                        View Project
+                      </button>
+                      <Link
+                        to="https://www.youtube.com/@rationalized"
+                        target="_blank"
+                        className="text-white ml-2 flex items-center mt-8 bg-[var(--main-color)] font-bold py-1 px-4 rounded-full border-2 border-transparent hover:text-[var(--text-color)] transition-all duration-500"
+                      >
+                        Visit Youtube
+                      </Link>
+                    </div>
+                  </div>
+                  <h3 className="text-center text-2xl font-bold uppercase text-[var(--text-color)] mt-3 mb-3">
+                    {item.name}
+                  </h3>
+                </div>
+              </SwiperSlide>
+            ))}
+          </CustomSwiper>
+          <PaginationContainer className="custom-pagination" />
         </div>
       </main>
       {isPopupOpen && (

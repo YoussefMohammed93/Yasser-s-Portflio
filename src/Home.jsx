@@ -13,14 +13,14 @@ export default function Home() {
       <Header />
       <SettingsBox />
       <Circles />
-      <main className="home-main p-main pt-20 lg:pt-44 bg-[var(--bg-main)] min-h-screen">
+      <main className="home-main p-main pt-20 lg:pt-52 bg-[var(--bg-main)] min-h-screen">
         <section className="home-container grid grid-cols-1 lg:grid-cols-12 items-center relative z-20">
           <div className="col-span-1 lg:col-span-6 text-center lg:text-start mt-12">
             <h1 className="text-4xl lg:text-5xl font-black text-[var(--text-color)]">
-              Hello , I'm Yasser
+              Hello , I'm Yaser
             </h1>
             <h2 className="text-2xl mt-4 lg:mt-6 text-[var(--gray-color)]">
-              An Creative{" "}
+              A Creative{" "}
               <span className="text-[var(--main-color)] text-4xl font-bold ml-1 text-glow">
                 Artist
               </span>
@@ -120,11 +120,6 @@ export default function Home() {
             />
           </div>
         </section>
-        <div className="mouse-container justify-center mt-16 flex">
-          <Link>
-            <div className="mouse overflow-hidden relative z-20"></div>
-          </Link>
-        </div>
       </main>
       <SkillsSection />
       <Footer />

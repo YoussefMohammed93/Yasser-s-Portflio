@@ -41,7 +41,7 @@ const SkillsSection = () => {
       <div className="section-container">
         <div>
           <div className="text-center pt-8">
-            <h1 className="text-4xl sm:text-5xl font-black text-[var(--text-color)] uppercase">
+            <h1 className="main-title text-3xl sm:text-5xl font-black text-[var(--text-color)] uppercase">
               My Skills
             </h1>
           </div>

@@ -355,36 +355,6 @@
   }
 }
 
-/* Mouse Animation */
-.mouse {
-  width: 30px;
-  height: 50px;
-  border: 2px solid var(--text-color);
-  border-radius: 60px;
-}
-
-.mouse::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--text-color);
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 1.3s infinite;
-  -webkit-animation: wheel 1.3s infinite;
-}
-
-@keyframes wheel {
-  100% {
-    opacity: 0;
-    top: 25px;
-  }
-}
-
 @keyframes glow {
   0% {
     text-shadow: 0 0 1px var(--main-color), 0 0 2px var(--main-color),
@@ -502,4 +472,30 @@
   border-radius: 10px;
   background-color: var(--main-color);
   margin: 0 0 8px 20px;
+}
+
+.rabid-card,
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay,
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.68); /* Change color and opacity as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.rabid-card:hover .overlay,
+.project-card:hover .project-overlay {
+  opacity: 1;
 }

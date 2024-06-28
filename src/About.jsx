@@ -8,6 +8,7 @@ import YasserImg from "/src/assets/yasser2.jpg";
 import YoutubeIcon from "/src/assets/youtube.png";
 import XIcon from "/src/assets/twitter.png";
 import BuyMeCoffe from "/src/assets/buymecoffe.png";
+import InstagramIcon from "/src/assets/instagram.png";
 import AnimatedText from "./components/AnimatedText";
 
 export default function About() {
@@ -50,14 +51,29 @@ export default function About() {
                     className="mx-5"
                     target="_blank"
                   >
-                    <img src={XIcon} alt="Youtube" className="w-9 h-9" />
+                    <img src={XIcon} alt="X - Twitter" className="w-9 h-9" />
+                  </Link>
+                  <Link
+                    to="https://www.instagram.com/yaserahmad0_0?igsh=MWVhejZvZ2F2ODE0MA=="
+                    className="ml-3 mr-5"
+                    target="_blank"
+                  >
+                    <img
+                      src={InstagramIcon}
+                      alt="Instagram"
+                      className="w-9 h-9"
+                    />
                   </Link>
                   <Link
                     to="https://buymeacoffee.com/rationalized"
                     className=""
                     target="_blank"
                   >
-                    <img src={BuyMeCoffe} alt="Youtube" className="w-11 h-11" />
+                    <img
+                      src={BuyMeCoffe}
+                      alt="Buy Me a Coffee"
+                      className="w-11 h-11"
+                    />
                   </Link>
                 </div>
               </div>
@@ -67,7 +83,7 @@ export default function About() {
                   target="_blank"
                   className="text-white text-lg xl:text-xl text-center bg-[var(--main-color)] hover:bg-[var(--bg-main)] hover:text-[var(--text-color)] font-bold py-2 px-4 lg:px-6 rounded-lg border-2 border-transparent hover:border-[var(--main-color)] transition-all duration-500"
                 >
-                  Check Out My Resume
+                  Check Out My Resume!
                 </Link>
                 <Link
                   to="mailto:theyasergalal@gmail.com"
