@@ -35,13 +35,13 @@ const skills = [
 const SkillsSection = () => {
   return (
     <section
-      className="skills-section bg-[var(--bg-second)] relative z-30"
-      id="skills-section"
+      className="skills-section bg-[var(--bg-second)] relative z-20"
+      id="skills"
     >
       <div className="section-container">
         <div>
           <div className="text-center pt-8">
-            <h1 className="text-4xl sm:text-5xl font-black text-[var(--text-color)] uppercase my-5">
+            <h1 className="text-4xl sm:text-5xl font-black text-[var(--text-color)] uppercase">
               My Skills
             </h1>
           </div>
@@ -53,7 +53,7 @@ const SkillsSection = () => {
               delay: 2000,
               disableOnInteraction: false,
             }}
-            className="cursor-pointer"
+            className="cursor-pointer pb-16 pt-2"
             pagination={{
               clickable: true,
               dynamicBullets: true,
@@ -69,9 +69,6 @@ const SkillsSection = () => {
               },
               1024: {
                 slidesPerView: 4,
-              },
-              1280: {
-                slidesPerView: 5,
               },
             }}
           >

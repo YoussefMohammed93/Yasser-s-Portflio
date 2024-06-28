@@ -86,6 +86,9 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .mouse {
+    margin-top: -40px !important;
+  }
 }
 
 /* Circles */
@@ -438,4 +441,21 @@
 
 .swiper-pagination-bullet-active {
   background: var(--main-color);
+}
+
+.swiper-pagination {
+  padding-bottom: 50px;
+}
+
+.scroll-to-top button {
+  position: fixed;
+  left: -50px;
+  bottom: 10px;
+  transition: all ease-in-out 0.3s;
+}
+.scroll-to-top button.active {
+  left: 10px;
+}
+.scroll-to-top button:hover {
+  border: 2px solid var(--text-color);
 }
