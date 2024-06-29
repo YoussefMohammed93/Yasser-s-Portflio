@@ -78,13 +78,13 @@ export default function About() {
                 </div>
               </div>
               <div className="resume mt-10 flex flex-col sm:flex-row">
-                <Link
-                  to="https://drive.google.com/file/d/1ZsUCT-qrY2kBMYH9z0PEfQct8ocHWLgZ/view"
-                  target="_blank"
+                <a
+                  href="/pdf.pdf"
+                  download="/pdf.pdf"
                   className="text-white text-lg xl:text-xl text-center bg-[var(--main-color)] hover:bg-[var(--bg-main)] hover:text-[var(--text-color)] font-bold py-2 px-4 lg:px-6 rounded-lg border-2 border-transparent hover:border-[var(--main-color)] transition-all duration-500"
                 >
                   Check Out My Resume!
-                </Link>
+                </a>
                 <Link
                   to="mailto:theyasergalal@gmail.com"
                   target="_blank"
